@@ -30,12 +30,14 @@ public class MinutesController {
 		activities.add(run);
 		
 		Activity bike = new Activity();
-		bike.setDesc("Run");
+		bike.setDesc("Bike");
 		activities.add(bike);
 		
 		Activity swim = new Activity();
-		swim.setDesc("Run");
+		swim.setDesc("Swim");
 		activities.add(swim );
+		
+		return activities;
 	}
 	
 //	@RequestMapping(value="/addMoreMinutes")
