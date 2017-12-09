@@ -22,6 +22,10 @@
 		<servlet-name>springmvcServlet</servlet-name>
 		<url-pattern>/pdfs/**</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>springmvcServlet</servlet-name>
+		<url-pattern>*.json</url-pattern>
+	</servlet-mapping>
 
   <display-name>Archetype Created Web Application</display-name>
 </web-app>
