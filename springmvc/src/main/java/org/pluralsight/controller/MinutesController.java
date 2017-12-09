@@ -1,9 +1,15 @@
 package org.pluralsight.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.pluralsight.model.Activity;
 import org.pluralsight.model.Exercise;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MinutesController {
@@ -13,6 +19,23 @@ public class MinutesController {
 		
 		System.out.println("exercise: " + exercise.getMinutes());
 		return "addMinutes";
+	}
+	
+	@RequestMapping(value="/activities", method = RequestMethod.GET)
+	public @ResponseBody List<Activity> findAllActivities() {
+		List<Activity> activities = new ArrayList<Activity>();
+		
+		Activity run = new Activity(); 
+		run.setDesc("Run");
+		activities.add(run);
+		
+		Activity bike = new Activity();
+		bike.setDesc("Run");
+		activities.add(bike);
+		
+		Activity swim = new Activity();
+		swim.setDesc("Run");
+		activities.add(swim );
 	}
 	
 //	@RequestMapping(value="/addMoreMinutes")
